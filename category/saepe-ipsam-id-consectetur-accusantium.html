@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Be right back</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <style>
+    .content {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 135px;
+    }
+
+    .title {
+      font-size: 21px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .brand-logo {
+      max-width: 140px;
+      max-height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <a href="https://zcart.incevio.cloud">
+        <img src="https://zcart.incevio.cloud/image/images/63fde8b7bd656.webp?p=full" class="brand-logo" alt="LOGO" title="LOGO" />
+      </a>
+      <div class="title">Sorry, the page you are looking for could not be found.</div>
+      <a href="http://zcart.incevio.cloud/">Go Back</a>
+    </div>
+  </div>
+<style type="text/css">
+  #consentBox {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 9999;
+  }
+
+  #consentBox.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+  }
+
+  ::selection {
+    color: #fff;
+    background: #229a0f;
+  }
+
+  #consentContent p {
+    color: #858585;
+    margin: 10px 0 20px 0;
+  }
+
+  #consentContent .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .consentButton,
+  .rejectButton {
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .consentButton {
+    background: var(--primary-color);
+    margin-right: 10px;
+  }
+
+  .rejectButton {
+    color: #111211;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+  }
+</style>
+
+<div id="consentBox">
+  <div id="consentContent">
+    <p>
+      We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By continuing to the site, you consent to store on your device all the technologies described in our cookie policy.
+      <a href="https://zcart.incevio.cloud/page/privacy-policy" target="_blank">Here is the the cookie policy</a>
+    </p>
+
+    <div class="buttons">
+      <button class="consentButton">
+        Allow cookies
+      </button>
+
+      <button class="rejectButton">
+        Reject
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const consentBox = document.getElementById("consentBox");
+  const acceptBtn = document.querySelector(".consentButton");
+  const rejectBtn = document.querySelector(".rejectButton");
+  const domain = "zcart.incevio.cloud";
+  const cookieName = "zCart Marketplace_cookie_consent";
+
+  // When accept
+  acceptBtn.onclick = () => {
+    setCookie(cookieName, 'accept', 1);
+    hideCookieDialog();
+  };
+
+  // When reject
+  rejectBtn.onclick = () => {
+    setCookie(cookieName, 'reject', 1);
+    hideCookieDialog();
+  };
+
+  function setCookie(name, value, expirationInDays) {
+    const date = new Date();
+    date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+
+    document.cookie = name + '=' + value +
+      ';expires=' + date.toUTCString() +
+      ';domain=' + domain +
+      ';path=/';
+  }
+
+  function hideCookieDialog() {
+    if (document.cookie) {
+      consentBox.classList.add("hide");
+    } else {
+      alert("Cookie can't be set! Please" + " unblock this site from the cookie" + " setting of your browser.");
+    }
+  }
+
+  let checkCookie = document.cookie.indexOf(cookieName);
+  checkCookie !== -1 ? consentBox.classList.add("hide") : consentBox.classList.remove("hide");
+</script>
+</body>
+
+</html>

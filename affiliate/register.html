@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from zcart.incevio.cloud/affiliate/register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Aug 2024 08:07:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="csrf-token" content="1cPSxsVHLlio7eCcUihhqhPX3R9LtCv7aq765BeA">
+  <title>zCart</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <link href="../css/app.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+    .select2-selection-arrow {
+      display: none;
+    }
+
+    .form-control-feedback {
+      width: 46px;
+      height: 46px;
+      line-height: 46px;
+    }
+
+    .select2-container--default .select2-selection--single {
+      height: 46px !important;
+      padding: 10px 16px;
+      font-size: 18px;
+      line-height: 1.33;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection-rendered {
+      line-height: 31px !important;
+    }
+
+    .iti {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="hold-transition login-page">
+  <div class="login-box">
+    
+      <div class="box">
+    <div class="login-section">
+      <div class="form-container">
+        <div class="image-holder-affiliate"></div>
+        <div class="login-form-section">
+          <div class="login-logo">
+            <a href="../index.html">
+              <img src="../image/images/63fde8b7bd656637d.webp?p=full" class="brand-logo" height="47px" alt="Logo" title="Logo">
+            </a>
+          </div>
+
+          <div class="form-section">
+            <h3 class="text-center mt-0">Register</h3>
+            <form method="POST" action="https://zcart.incevio.cloud/affiliate/register" accept-charset="UTF-8" id="form" data-toggle="validator" enctype="multipart/form-data"><input name="_token" type="hidden" value="1cPSxsVHLlio7eCcUihhqhPX3R9LtCv7aq765BeA">
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" placeholder="Full name" required name="name" type="text">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" placeholder="Enter a valid email address" required name="email" type="email">
+              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" id="js-username" placeholder="Enter Unique Username" required name="username" type="text">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+              <div class="help-block with-errors"><span id="js-username-feedback"></span></div>
+            </div>
+
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" id="password" placeholder="Password" data-minlength="6" required name="password" type="password" value="">
+              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" placeholder="Confirm password" data-match="#password" required name="password_confirmation" type="password" value="">
+              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group has-feedback">
+                              <div class="g-recaptcha" data-sitekey="6Le1X2khAAAAACYuZYqjFgI9XpHvw7fqZeCn8g1Z"></div>
+                            <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="form-group">
+                  <label for="terms_and_conditions">
+                    <input class="icheck" id="terms_and_conditions" required name="agree" type="checkbox"> I agree with the <u><a href=":url" target="_blank"> terms</a></u>
+                  </label>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <input class="btn btn-block btn-lg btn-flat btn-primary" type="submit" value="Register">
+              </div>
+            </div>
+            </form>
+            <a href="login.html" class="btn btn-link">I already have an account</a>
+          </div> <!-- /.form-section -->
+        </div> <!-- /.login-form-section -->
+      </div> <!-- /.form-container -->
+    </div> <!-- /.login-section -->
+  </div> <!-- /.box -->
+
+  </div>
+  <!-- /.login-box -->
+
+  <script src="../js/app.js"></script>
+
+  
+      <script src="../../www.google.com/recaptcha/api.js"></script>
+
+ <style type="text/css">
+   .g-recaptcha iframe {
+     height: 78px !important;
+   }
+
+ </style>
+  
+  <!-- Scripts -->
+    <script>
+  $(document).ready(function() {
+    $('#js-username').on('keyup', function() {
+        var username = $(this).val();
+        
+                    var validationUrl = 'form/validate.html';
+        
+        $.ajax({
+            url: validationUrl,
+            type: 'GET',
+            data: { username: username },
+            success: function(response) {
+                if(response.exists){
+                    $('#js-username-feedback').text("* This Username is not available").css('color', 'red');
+                } else {
+                    $('#js-username-feedback').text("* This Username is available").css('color', 'green');
+                }
+            },
+            error: function() {
+                $('#js-username-feedback').text('Error checking username.').css('color', 'red');
+            }
+        });
+    });
+  });
+</script>
+  <script type="text/javascript">
+    $(".demo-restrict").off().on('click', function(e) {
+      e.preventDefault();
+      $('.login-box').prepend("<p class='alert alert-danger alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>This action is restricted for the demo mode!</p>");
+    });
+  </script>
+
+  <script type="text/javascript">
+    $("#plans").select2({
+      minimumResultsForSearch: -1,
+    });
+    $("#exp-year").select2({
+      placeholder: "Expiration year",
+      minimumResultsForSearch: -1,
+    });
+    $("#exp-month").select2({
+      placeholder: "Expiration month",
+      minimumResultsForSearch: -1,
+    });
+
+    $('.icheck').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+
+    //Country
+    $("#country_id").change(function() {
+      $("#state_id").empty().trigger('change'); //Reset the state dropdown
+
+      $("#country_id").select2();
+
+      var ID = $("#country_id").select2('data')[0].id;
+      var url = "../address/ajax/getCountryStates.html"
+
+      $.ajax({
+        delay: 250,
+        data: "id=" + ID,
+        url: url,
+        success: function(result) {
+          var data = [];
+          if (result.length !== 0) {
+            data = $.map(result, function(val, id) {
+              return {
+                id: id,
+                text: val
+              };
+            })
+          }
+
+          $("#state_id").select2({
+            allowClear: true,
+            tags: true,
+            placeholder: "State/Province/Region",
+            data: data,
+            sortResults: function(results, container, query) {
+              if (query.term) {
+                return results.sort();
+              }
+
+              return results;
+            }
+          });
+        }
+      });
+    });
+
+    // });
+  </script>
+
+  <div class="loader">
+    <div>
+      <img class="loading-image" src="../themes/default/assets/images/loading.html" alt="busy...">
+    </div>
+  </div>
+</body>
+
+
+<!-- Mirrored from zcart.incevio.cloud/affiliate/register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Aug 2024 08:07:53 GMT -->
+</html>
