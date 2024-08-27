@@ -41,11 +41,26 @@
         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
       </button>
       <a class="navbar-brand page-scroll" href="index.html">
-        
-        <img src="https://www.zcart.incevio.cloud/image/images/63fde8b7bd656.webp?p=logo" class="brand-logo" alt="Logo" title="Logo" />
-        
-        
-      </a>
+        <img src="img/logo.png" class="brand-logo" alt="Logo" title="Logo" id="navbar-logo" />
+    </a>
+    
+      <script>
+       document.addEventListener("DOMContentLoaded", function() {
+      var logo = document.getElementById('navbar-logo');
+      var originalSrc = 'img/logo.png';
+      var scrollSrc = 'img/logo_white.png';
+
+      window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) { // Adjust the scroll value as needed
+              logo.src = scrollSrc;
+          } else {
+              logo.src = originalSrc;
+          }
+          });
+      });
+
+
+      </script>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,19 +81,33 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="intro-text">
+  <!-- <div class="intro-lead-in">Everything you need to start selling online!</div> -->
+ 
+<!-- <div class="intro-heading">It&#039;s made for you</div> -->
+<a href="register.html" class="btn btn-primary btn-lg selling">Start Selling</a>
 
+          <!-- <p class="sellin-price-tagline">Starting $9 a month + additional fees</p> -->
+      </div>
+      
+</div>
+</div>
   <!-- Header -->
-  <header>
+  <!-- <header>
     <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Everything you need to start selling online!</div>
-        <div class="intro-heading">It&#039;s made for you</div>
-        <a href="register.html" class="btn btn-primary btn-lg selling">Start Selling</a>
-
-                  <p class="sellin-price-tagline">Starting $9 a month + additional fees</p>
-              </div>
-    </div>
-  </header>
+     
+  </header> -->
 
   <!-- Services Section -->
   <section id="services">
