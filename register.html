@@ -65,23 +65,34 @@
         <div class="login-form-section">
           <div class="login-logo">
             <a href="index.html">
-              <img src="image/images/63fde8b7bd656637d.webp?p=full" class="brand-logo" height="47px" alt="Logo" title="Logo">
+              <img src="img/logo.png" class="brand-logo" style="width: 230px;" alt="Logo" title="Logo">
+
             </a>
           </div>
           <div class="form-section">
             <h3 class="text-center mt-0">Register</h3>
+            
             <form method="POST" action="sell_vendor_reg.php" accept-charset="UTF-8" id="registration-form" data-toggle="validator" enctype="multipart/form-data">
               <input name="_token" type="hidden" value="1cPSxsVHLlio7eCcUihhqhPX3R9LtCv7aq765BeA">
-          
+              <div class="form-group has-feedback">
+                <select id="plans" class="form-control input-lg" required name="plan">
+                    <option readonly>Select A Option</option>
+                    <option value="price_1KBAXaG09em6dIPhHvdGFbcD">Partner</option>
+                    <option value="price_1KBAXaG09em6dIPhf2VWWIXO">Vendor</option>
+                   
+                  </select>
+             
+              </div>
               <div class="form-group has-feedback">
                   <select id="plans" class="form-control input-lg" required name="plan">
-                      <option value="price_1KBAXaG09em6dIPhHvdGFbcD">Individual ($9.00/month)</option>
-                      <option value="price_1KBAXaG09em6dIPhf2VWWIXO">Business ($29.00/month)</option>
-                      <option value="price_1KBAXaG09em6dIPhblIucipd">Professional ($49.00/month)</option>
-                  </select>
-                  <i class="glyphicon glyphicon-dashboard form-control-feedback"></i>
-                  <div class="help-block with-errors">Will be charged after the 13 days trial period.</div>
-              </div>
+                      
+                      <option readonly>Select A Plan</option>
+                      <option value="price_1KBAXaG09em6dIPhf2VWWIXO">Business (Rs. 5500 /year)</option>
+                      <option value="price_1KBAXaG09em6dIPhblIucipd">Professional (Rs. 12000 /year)</option>
+                  
+                    </select>
+              
+                </div>
           
               <div class="form-group has-feedback">
                   <input class="form-control input-lg" placeholder="Full name" required name="name" type="text">
@@ -196,11 +207,6 @@
               </div>
               <!-- New fields end here -->
           
-              <div class="form-group has-feedback">
-                  <div class="g-recaptcha" data-sitekey="6Le1X2khAAAAACYuZYqjFgI9XpHvw7fqZeCn8g1Z"></div>
-                  <div class="help-block with-errors"></div>
-              </div>
-          
               <div class="form-group">
                   <label>
                       <input class="icheck" required name="agree" type="checkbox"> I agree to the <u><a href="page/terms-of-use-merchant.html" target="_blank">terms</a></u>
@@ -210,6 +216,7 @@
           
               <input id="card-button" class="btn btn-block btn-lg btn-flat btn-primary" type="submit" value="Register">
           </form>
+          
 x           
 
             <div class="spacer10"></div>
