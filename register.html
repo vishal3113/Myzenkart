@@ -70,68 +70,147 @@
           </div>
           <div class="form-section">
             <h3 class="text-center mt-0">Register</h3>
-            <form method="POST" action="https://zcart.incevio.cloud/register" accept-charset="UTF-8" id="registration-form" data-toggle="validator" enctype="multipart/form-data"><input name="_token" type="hidden" value="1cPSxsVHLlio7eCcUihhqhPX3R9LtCv7aq765BeA">
-
-                          <div class="form-group has-feedback">
-                <select id="plans" class="form-control input-lg" required name="plan"><option value="price_1KBAXaG09em6dIPhHvdGFbcD">Individual ($9.00/month)</option><option value="price_1KBAXaG09em6dIPhf2VWWIXO">Business ($29.00/month)</option><option value="price_1KBAXaG09em6dIPhblIucipd">Professional ($49.00/month)</option></select>
-                <i class="glyphicon glyphicon-dashboard form-control-feedback"></i>
-                <div class="help-block with-errors">
-                                      Will be charged after the 13 days trial period.
-                                  </div>
+            <form method="POST" action="sell_vendor_reg.php" accept-charset="UTF-8" id="registration-form" data-toggle="validator" enctype="multipart/form-data">
+              <input name="_token" type="hidden" value="1cPSxsVHLlio7eCcUihhqhPX3R9LtCv7aq765BeA">
+          
+              <div class="form-group has-feedback">
+                  <select id="plans" class="form-control input-lg" required name="plan">
+                      <option value="price_1KBAXaG09em6dIPhHvdGFbcD">Individual ($9.00/month)</option>
+                      <option value="price_1KBAXaG09em6dIPhf2VWWIXO">Business ($29.00/month)</option>
+                      <option value="price_1KBAXaG09em6dIPhblIucipd">Professional ($49.00/month)</option>
+                  </select>
+                  <i class="glyphicon glyphicon-dashboard form-control-feedback"></i>
+                  <div class="help-block with-errors">Will be charged after the 13 days trial period.</div>
               </div>
-            
-            <div class="form-group has-feedback">
-              <input class="form-control input-lg" placeholder="Full name" required name="name" type="text">
-              <span class="glyphicon glyphicon-user form-control-feedback"></span>
-              <div class="help-block with-errors"></div>
-            </div>
-
-            <div class="form-group has-feedback">
-              <input class="form-control input-lg" placeholder="Enter a valid email address" required name="email" type="email">
-              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-              <div class="help-block with-errors"></div>
-            </div>
-
-            <div class="form-group has-feedback">
-              <input class="form-control input-lg" id="password" placeholder="Password" data-minlength="6" required name="password" type="password" value="">
-              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-              <div class="help-block with-errors"></div>
-            </div>
-
-            <div class="form-group has-feedback">
-              <input class="form-control input-lg" placeholder="Confirm password" data-match="#password" required name="password_confirmation" type="password" value="">
-              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-              <div class="help-block with-errors"></div>
-            </div>
-
-                          <div class="form-group has-feedback">
-                <input class="form-control input-lg" placeholder="Phone" name="phone" type="text">
-                <i class="glyphicon glyphicon-phone form-control-feedback"></i>
-                <div class="help-block with-errors"></div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Full name" required name="name" type="text">
+                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                  <div class="help-block with-errors"></div>
               </div>
-            
-            <div class="form-group has-feedback">
-              <input class="form-control input-lg" placeholder="Shop name" required name="shop_name" type="text">
-              <i class="glyphicon glyphicon-equalizer form-control-feedback"></i>
-              <div class="help-block with-errors"></div>
-            </div>
-
-            
-                          <div class="form-group has-feedback">
-                <div class="g-recaptcha" data-sitekey="6Le1X2khAAAAACYuZYqjFgI9XpHvw7fqZeCn8g1Z"></div>
-                <div class="help-block with-errors"></div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Enter a valid email address" required name="email" type="email">
+                  <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                  <div class="help-block with-errors"></div>
               </div>
-            
-            <div class="form-group">
-              <label>
-                <input class="icheck" required name="agree" type="checkbox"> I agree to the <u><a href="page/terms-of-use-merchant.html" target="_blank"> terms</a></u>
-              </label>
-              <div class="help-block with-errors"></div>
-            </div>
-
-            <input id="card-button" class="btn btn-block btn-lg btn-flat btn-primary" type="submit" value="Register">
-
-            </form>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" id="password" placeholder="Password" data-minlength="6" required name="password" type="password" value="">
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Confirm password" data-match="#password" required name="password_confirmation" type="password" value="">
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Phone" name="phone" type="text">
+                  <i class="glyphicon glyphicon-phone form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Shop name" required name="shop_name" type="text">
+                  <i class="glyphicon glyphicon-equalizer form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <!-- New fields start here -->
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Firm name" required name="firm_name" type="text">
+                  <i class="glyphicon glyphicon-briefcase form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Proprietor name" required name="proprietor_name" type="text">
+                  <i class="glyphicon glyphicon-user form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="GST number" required name="gst_number" type="text">
+                  <i class="glyphicon glyphicon-barcode form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Address" required name="address" type="text">
+                  <i class="glyphicon glyphicon-home form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Mobile number" required name="mobile_number" type="text">
+                  <i class="glyphicon glyphicon-phone form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <input class="form-control input-lg" placeholder="Email ID" required name="firm_email" type="email">
+                  <i class="glyphicon glyphicon-envelope form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <select class="form-control input-lg" required name="looking_for">
+                      <option value="" disabled selected>Looking for...</option>
+                      <option value="website">Website</option>
+                      <option value="app">App</option>
+                      <option value="both">Both</option>
+                  </select>
+                  <i class="glyphicon glyphicon-cog form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <label for="passport_upload">Passport size photo upload</label>
+                  <input class="form-control input-lg" id="passport_upload" name="passport_upload" type="file" required>
+                  <i class="glyphicon glyphicon-picture form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <label for="gst_upload">GST registration paper upload</label>
+                  <input class="form-control input-lg" id="gst_upload" name="gst_upload" type="file" required>
+                  <i class="glyphicon glyphicon-upload form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <label for="aadhar_upload">Aadhar card upload</label>
+                  <input class="form-control input-lg" id="aadhar_upload" name="aadhar_upload" type="file" required>
+                  <i class="glyphicon glyphicon-upload form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group has-feedback">
+                  <label for="pancard_upload">PAN card upload</label>
+                  <input class="form-control input-lg" id="pancard_upload" name="pancard_upload" type="file" required>
+                  <i class="glyphicon glyphicon-upload form-control-feedback"></i>
+                  <div class="help-block with-errors"></div>
+              </div>
+              <!-- New fields end here -->
+          
+              <div class="form-group has-feedback">
+                  <div class="g-recaptcha" data-sitekey="6Le1X2khAAAAACYuZYqjFgI9XpHvw7fqZeCn8g1Z"></div>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <div class="form-group">
+                  <label>
+                      <input class="icheck" required name="agree" type="checkbox"> I agree to the <u><a href="page/terms-of-use-merchant.html" target="_blank">terms</a></u>
+                  </label>
+                  <div class="help-block with-errors"></div>
+              </div>
+          
+              <input id="card-button" class="btn btn-block btn-lg btn-flat btn-primary" type="submit" value="Register">
+          </form>
+x           
 
             <div class="spacer10"></div>
 
